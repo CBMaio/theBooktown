@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-color: #E0D4CA;
+}
+
+@font-face {
+  font-family: "Ruge Boogie";
+  src: url('../fonts/Ruge_Boogie/RugeBoogie-Regular.ttf');
+}
+
+nav {
+  background-color: var(--primary-color);
+}
+
+.brand {
+  font-family: "Ruge Boogie";
+}
+
+.book-background {
+  background-image: url(../img/bg-mobile.svg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  min-height: 600px;
+}
+
+.main-title {
+  font-size: 64px;
+  width: 275px;
+  text-align: center;
+  margin: 60px auto 0;
+}
