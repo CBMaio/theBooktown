@@ -6,6 +6,9 @@
 
 :root {
   --primary-color: #E0D4CA;
+  --dark-blue: #314250;
+  --button: #4F687B;
+  --light: #ffffff;
 }
 
 @font-face {
@@ -25,12 +28,46 @@ nav {
   background-image: url(../img/bg-mobile.svg);
   background-position: bottom;
   background-repeat: no-repeat;
+  background-size: cover;
   min-height: 600px;
 }
 
 .main-title {
   font-size: 64px;
-  width: 275px;
-  text-align: center;
   margin: 60px auto 0;
+  text-align: center;
+  width: 275px;
+}
+
+.nav-link,
+.nav-link.active {
+  color: var(--dark-blue);
+}
+
+.nav-link {
+  opacity: .8;
+}
+
+.button-container .btn {
+  background-color: var(--button);
+  border-radius: 15px;
+  color: var(--light);
+  height: 40px;
+  margin: auto;
+  width: 180px;
+}
+
+/* FOOTER */
+
+.footer {
+  background-color: var(--primary-color);
+  height: 177px;
+}
+
+.footer ul {
+  list-style-type: none;
+}
+
+.footer .list-item {
+  color: var(--dark-blue);
 }
