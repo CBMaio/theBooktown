@@ -10,7 +10,7 @@ const getData = async () => {
 };
 
 const createBookCard = ({ isbn13, title, image }, isReserved) => {
-  const element = `
+  const element = $(`
     <div class="card mb-1 mt-1 p-0" id=${isbn13}>
       <div class="row g-0 h-100">
         <div class="col-3 image-container">
@@ -43,7 +43,7 @@ const createBookCard = ({ isbn13, title, image }, isReserved) => {
         </div>
       </div>
     </div>
-  `;
+  `);
 
   return element;
 };
@@ -75,13 +75,13 @@ const cancelBooking = (id) => {
 };
 
 const resetSection = (section) => {
-  section.innerHTML = "";
+  $(section).html("");
 };
 
 const addBooksToSection = (section, books, isReserved = false) => {
   books.forEach((book) => {
     const card = createBookCard(book, isReserved);
-    section.innerHTML += card;
+    card.appendTo(section);
   });
 };
 
